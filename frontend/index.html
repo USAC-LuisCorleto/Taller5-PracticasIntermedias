@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Lenguajes de Programación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Encuesta de Lenguajes de Programación</h1>
+            <p class="subtitle">¡Vota por tu lenguaje de programación favorito!</p>
+        </header>
+
+        <main>
+            <section id="poll-section" class="card">
+                <h2 id="poll-question">Cargando pregunta...</h2>
+                <div id="options-container" class="options-container">
+                    <p class="loading">Cargando opciones...</p>
+                </div>
+                <div class="button-container">
+                    <button id="vote-button" class="btn primary-btn" disabled>Votar</button>
+                </div>
+            </section>
+
+            <section id="results-section" class="card hidden">
+                <h2>Resultados de la votación</h2>
+                <div id="results-container" class="results-container">
+                    <!-- Carga de resultados -->
+                </div>
+                <div class="button-container">
+                    <button id="back-button" class="btn secondary-btn">Volver a votar</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Ejemplo práctico de Fundamentos Web con JavaScript</p>
+            <p>Taller 5 - Prácticas Intermedias</p>
+        </footer>
+    </div>
+
+    <!-- Template para las opciones de voto -->
+    <template id="option-template">
+        <div class="option">
+            <input type="radio" name="poll-option" id="" value="">
+            <label for=""></label>
+        </div>
+    </template>
+
+    <!-- Template para los resultados -->
+    <template id="result-template">
+        <div class="result-item">
+            <div class="result-info">
+                <span class="language-name"></span>
+                <span class="vote-count"></span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </template>
+
+    <script src="index.js"></script>
+</body>
+</html>
