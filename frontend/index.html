@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,31 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <div class="container">
+    <div class="contenedor">
         <header>
             <h1>Encuesta de Lenguajes de Programación</h1>
-            <p class="subtitle">¡Vota por tu lenguaje de programación favorito!</p>
+            <p class="subtitulo">¡Vota por tu lenguaje de programación favorito!</p>
         </header>
 
         <main>
-            <section id="poll-section" class="card">
-                <h2 id="poll-question">Cargando pregunta...</h2>
-                <div id="options-container" class="options-container">
-                    <p class="loading">Cargando opciones...</p>
+            <section id="seccion-encuesta" class="tarjeta">
+                <h2 id="pregunta-encuesta"></h2>
+                <div id="contenedor-opciones" class="contenedor-opciones">
+                    <p class="cargando"></p>
                 </div>
-                <div class="button-container">
-                    <button id="vote-button" class="btn primary-btn" disabled>Votar</button>
+                <div class="contenedor-botones">
+                    <button id="boton-votar" class="btn btn-primario" disabled>Votar</button>
                 </div>
             </section>
 
-            <section id="results-section" class="card hidden">
+            <section id="seccion-resultados" class="tarjeta oculto">
                 <h2>Resultados de la votación</h2>
-                <div id="results-container" class="results-container">
-                    <!-- Carga de resultados -->
+                <div id="contenedor-resultados" class="contenedor-resultados">
                 </div>
-                <div class="button-container">
-                    <button id="back-button" class="btn secondary-btn">Volver a votar</button>
+                <div class="contenedor-botones">
+                    <button id="boton-volver" class="btn btn-secundario">Volver a votar</button>
                 </div>
             </section>
         </main>
@@ -42,27 +43,26 @@
         </footer>
     </div>
 
-    <!-- Template para las opciones de voto -->
-    <template id="option-template">
-        <div class="option">
-            <input type="radio" name="poll-option" id="" value="">
+    <template id="plantilla-opcion">
+        <div class="opcion">
+            <input type="radio" name="opcion-encuesta" id="" value="">
             <label for=""></label>
         </div>
     </template>
 
-    <!-- Template para los resultados -->
-    <template id="result-template">
-        <div class="result-item">
-            <div class="result-info">
-                <span class="language-name"></span>
-                <span class="vote-count"></span>
+    <template id="plantilla-resultado">
+        <div class="item-resultado">
+            <div class="info-resultado">
+                <span class="nombre-lenguaje"></span>
+                <span class="conteo-votos"></span>
             </div>
-            <div class="progress-container">
-                <div class="progress-bar"></div>
+            <div class="contenedor-progreso">
+                <div class="barra-progreso"></div>
             </div>
         </div>
     </template>
 
     <script src="index.js"></script>
 </body>
+
 </html>

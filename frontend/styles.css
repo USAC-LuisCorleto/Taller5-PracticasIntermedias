@@ -1,4 +1,3 @@
-/* Estilos generales y reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,35 +5,34 @@
 }
 
 :root {
-    --primary-color: #4a6bff;
-    --primary-hover: #3a5ae8;
-    --secondary-color: #6c757d;
-    --secondary-hover: #5a6268;
-    --background-color: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-color: #333333;
-    --border-color: #dee2e6;
-    --success-color: #28a745;
-    --danger-color: #dc3545;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --border-radius: 8px;
-    --transition: all 0.3s ease;
+    --color-primario: #4a6bff;
+    --color-primario-hover: #3a5ae8;
+    --color-secundario: #6c757d;
+    --color-secundario-hover: #5a6268;
+    --color-fondo: #f8f9fa;
+    --fondo-tarjeta: #ffffff;
+    --color-texto: #333333;
+    --color-borde: #dee2e6;
+    --color-exito: #28a745;
+    --color-peligro: #dc3545;
+    --sombra-caja: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --radio-borde: 8px;
+    --transicion: all 0.3s ease;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     line-height: 1.6;
 }
 
-.container {
+.contenedor {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Encabezado */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -44,19 +42,18 @@ header {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--color-primario);
 }
 
-.subtitle {
+.subtitulo {
     font-size: 1.2rem;
-    color: var(--secondary-color);
+    color: var(--color-secundario);
 }
 
-/* Tarjetas */
-.card {
-    background-color: var(--card-bg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+.tarjeta {
+    background-color: var(--fondo-tarjeta);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
     padding: 30px;
     margin-bottom: 30px;
 }
@@ -64,44 +61,42 @@ h1 {
 h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: var(--color-texto);
 }
 
-/* Opciones de votación */
-.options-container {
+.contenedor-opciones {
     margin-bottom: 25px;
 }
 
-.option {
+.opcion {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     padding: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    transition: var(--transicion);
 }
 
-.option:hover {
-    border-color: var(--primary-color);
+.opcion:hover {
+    border-color: var(--color-primario);
     transform: translateY(-2px);
 }
 
-.option input[type="radio"] {
+.opcion input[type="radio"] {
     margin-right: 15px;
-    accent-color: var(--primary-color);
+    accent-color: var(--color-primario);
     width: 18px;
     height: 18px;
 }
 
-.option label {
+.opcion label {
     font-size: 1.1rem;
     cursor: pointer;
     flex: 1;
 }
 
-/* Botones */
-.button-container {
+.contenedor-botones {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -110,97 +105,93 @@ h2 {
 .btn {
     padding: 12px 25px;
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio-borde);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
-.primary-btn {
-    background-color: var(--primary-color);
+.btn-primario {
+    background-color: var(--color-primario);
     color: white;
 }
 
-.primary-btn:hover:not(:disabled) {
-    background-color: var(--primary-hover);
+.btn-primario:hover:not(:disabled) {
+    background-color: var(--color-primario-hover);
     transform: translateY(-2px);
 }
 
-.primary-btn:disabled {
+.btn-primario:disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
 
-.secondary-btn {
-    background-color: var(--secondary-color);
+.btn-secundario {
+    background-color: var(--color-secundario);
     color: white;
 }
 
-.secondary-btn:hover {
-    background-color: var(--secondary-hover);
+.btn-secundario:hover {
+    background-color: var(--color-secundario-hover);
     transform: translateY(-2px);
 }
 
-/* Resultados */
-.results-container {
+.contenedor-resultados {
     margin-bottom: 25px;
 }
 
-.result-item {
+.item-resultado {
     margin-bottom: 20px;
 }
 
-.result-info {
+.info-resultado {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
 }
 
-.language-name {
+.nombre-lenguaje {
     font-weight: 600;
 }
 
-.vote-count {
-    color: var(--secondary-color);
+.conteo-votos {
+    color: var(--color-secundario);
 }
 
-.progress-container {
+.contenedor-progreso {
     width: 100%;
     height: 20px;
-    background-color: var(--border-color);
+    background-color: var(--color-borde);
     border-radius: 10px;
     overflow: hidden;
 }
 
-.progress-bar {
+.barra-progreso {
     height: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--color-primario);
     border-radius: 10px;
     transition: width 1s ease-in-out;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 30px 0;
-    color: var(--secondary-color);
+    color: var(--color-secundario);
     font-size: 0.9rem;
 }
 
-/* Utilidades */
-.hidden {
+.oculto {
     display: none;
 }
 
-.loading {
+.cargando {
     text-align: center;
-    color: var(--secondary-color);
+    color: var(--color-secundario);
     font-style: italic;
 }
 
-/* Animaciones */
-@keyframes fadeIn {
+@keyframes aparecerGradual {
     from {
         opacity: 0;
     }
@@ -210,13 +201,12 @@ footer {
     }
 }
 
-.card {
-    animation: fadeIn 0.5s ease-in-out;
+.tarjeta {
+    animation: aparecerGradual 0.5s ease-in-out;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .container {
+    .contenedor {
         padding: 15px;
     }
 
@@ -224,7 +214,7 @@ footer {
         font-size: 2rem;
     }
 
-    .card {
+    .tarjeta {
         padding: 20px;
     }
 }
